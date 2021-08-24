@@ -1,0 +1,14 @@
+<div id="map">
+  <div class="my-google-map">
+    <div class="my-google-map">
+      <google-map
+            height="400px"
+            width="1300px"
+            [center]="center">
+        <map-marker *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              [options]="markerOptions"></map-marker>
+      </google-map>
+    </div>
+ </div>
+</div>

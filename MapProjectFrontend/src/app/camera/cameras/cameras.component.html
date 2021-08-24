@@ -1,0 +1,30 @@
+<h1>Security cameras Utrecht</h1>
+  <app-map [cameras]="cameras$ | async"></app-map>
+  <div id="source">
+    source:
+    <a href="https://data.overheid.nl/dataset/camera-s">https://data.overheid.nl/dataset/camera-s</a>
+  </div>
+  <main>
+    <table id="cameraTableContainer">
+      <tbody>
+        <tr>
+          <td>
+            <app-cameras-table [cameras]="camerasDivisibleByThree$ | async" [id]="'column3'" [title]="'Cameras 3'">
+            </app-cameras-table>
+          </td>
+          <td>
+            <app-cameras-table [cameras]="camerasDivisibleByThree$ | async" [id]="'column5'" [title]="'Cameras 5'">
+            </app-cameras-table>
+          </td>
+          <td>
+            <app-cameras-table [cameras]="camerasDivisibleByThreeAndFive$ | async" [id]="'column15'" [title]="'Cameras 3 & 5'">
+            </app-cameras-table>
+          </td>
+          <td>
+            <app-cameras-table [cameras]="camerasNotDivisibleByThreeAndFive$ | async" [id]="'columnOther'" [title]="'Cameras Overig'">
+            </app-cameras-table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>

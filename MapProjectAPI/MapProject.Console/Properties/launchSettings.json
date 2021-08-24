@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MapProject.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "name"
+    }
+  }
+}
